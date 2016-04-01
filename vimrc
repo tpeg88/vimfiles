@@ -3,6 +3,7 @@
 " [http://github.com/luan/vimfiles]
 " Maintained By: Luan Santos (GitHub: @luan)
 " =======================================
+execute pathogen#infect()
 
 if !has('nvim')
   set nocompatible
@@ -70,3 +71,11 @@ runtime! lib/auto_commands.vim
 
 silent! source ~/.vimrc.local
 
+" ----------------------------------------
+" Custom Keymappings
+" ----------------------------------------
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
