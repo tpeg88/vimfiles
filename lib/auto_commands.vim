@@ -7,7 +7,7 @@ if has("autocmd")
   autocmd BufNewFile,BufEnter * set formatoptions-=o
 
   " Fix trailing whitespace in my most used programming langauges
-  autocmd BufWritePre *.py,*.js,*.coffee,*.rb,*.c silent! :StripTrailingWhiteSpace
+  autocmd BufWritePre *.py,*.js,*.jsx,*.coffee,*.rb,*.c silent! :StripTrailingWhiteSpace
   autocmd FileType vim set fdm=marker foldmarker={{{,}}}
 
   if exists("g:autosave") && g:autosave == 1
@@ -30,11 +30,13 @@ if has("autocmd")
 
     autocmd! BufRead,BufNewFile *.sass setfiletype sass 
 
+    " autocmd! BufRead,BufNewFile *.md  setfiletype markdown
+    " autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
     autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
     autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
     " Don't syntax highlight markdown because it's often wrong
-    autocmd! FileType mkd setlocal syn=off
+    " autocmd! FileType mkd setlocal syn=off
 
     " Leave the return key alone when in command line windows, since it's used
     " to run commands there.

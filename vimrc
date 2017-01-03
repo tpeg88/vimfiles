@@ -6,7 +6,7 @@
 execute pathogen#infect()
 
 set nocompatible
-runtime! NeoBundle.vim
+" runtime! NeoBundle.vim
 
 silent! source ~/.vimrc.local.before
 
@@ -55,3 +55,25 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Following taken from http://stackoverflow.com/q/7955232/
+"save and close all files and save global session
+nnoremap <leader>q :call SaveSession()<CR>:wqa<CR>
+"close all files without saving and save global session
+nnoremap <leader>www :call SaveSession()<CR>:qa!<CR>
+
+function! SaveSession()
+    execute 'mksession! ' . getcwd() . '/.session.vim'
+endfunction
+
+function! RestoreSession()
+  if filereadable(getcwd() . '/.session.vim')
+"    if argc() == 0 "vim called without arguments
+      execute 'source ' . getcwd() . '/.session.vim'
+"    endif
+  endif
+  "syntax on
+endfunction
+
+autocmd VimLeave * call SaveSession()
+autocmd VimEnter * nested call RestoreSession()
