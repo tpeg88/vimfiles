@@ -1,10 +1,10 @@
 # The Vim Configuration. [![Build Status](https://travis-ci.org/luan/vimfiles.svg?branch=master)](https://travis-ci.org/luan/vimfiles)
 
-If you're trying to use this config checkout this [cheat sheet](https://github.com/luan/vimfiles/wiki/Luan's-Vim-Cheat-Sheet).
+If you're trying to use this config checkout this [cheat sheet](https://github.com/tirodactyl/vimfiles/wiki/Luan's-Vim-Cheat-Sheet).
 
 ## Installation
 
-1. `git clone http://github.com/luan/vimfiles.git ~/.vim`
+1. `git clone http://github.com/tirodactyl/vimfiles.git ~/.vim`
 1. `~/.vim/install` [more...](#install-script)
 1. Enjoy
 
@@ -52,11 +52,11 @@ I may make this more verbose later, but for now, here's a list of plugins that r
 
 **Default colorscheme: hybrid**
 
-[![hybrid](https://github.com/luan/vimfiles/raw/master/screenshots/hybrid.png)](https://github.com/luan/vimfiles/raw/master/screenshots/hybrid.png)
+[![hybrid](https://github.com/tirodactyl/vimfiles/raw/master/screenshots/hybrid.png)](https://github.com/tirodactyl/vimfiles/raw/master/screenshots/hybrid.png)
 
 **Alternate colorscheme: monokai**
 
-[![monokai](https://github.com/luan/vimfiles/raw/master/screenshots/monokai.png)](https://github.com/luan/vimfiles/raw/master/screenshots/monokai.png)
+[![monokai](https://github.com/tirodactyl/vimfiles/raw/master/screenshots/monokai.png)](https://github.com/tirodactyl/vimfiles/raw/master/screenshots/monokai.png)
 
 ## Install Script
 
