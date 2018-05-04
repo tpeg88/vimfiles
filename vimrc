@@ -3,7 +3,6 @@
 " [http://github.com/tirodactyl/vimfiles]
 " Maintained By: Tirso Peguero (GitHub: @tirodactyl)
 " =======================================
-execute pathogen#infect()
 
 if !has('nvim')
   set nocompatible
