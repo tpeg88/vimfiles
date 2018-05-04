@@ -31,7 +31,7 @@ do
   shift
 done
 
-FILES_TO_LINK="vimrc gvimrc"
+FILES_TO_LINK="vimrc"
 LOCALS=".vimrc.local.before .vimrc.local .vimrc.local.plugins"
 
 DIR=$(cd $(dirname $0) && pwd)
@@ -91,28 +91,6 @@ bold=`tput bold`
 normal=`tput sgr0`
 end_color='\033[0;m'
 
-if which go > /dev/null; then
-  echo -e "${yellow}INSTALL${end_color} ${bold}golang${normal} dependencies..."
-  gopackages="\
-    github.com/golang/lint/golint \
-    github.com/jstemmer/gotags \
-    github.com/kisielk/errcheck \
-    github.com/nsf/gocode \
-    golang.org/x/tools/cmd/godoc \
-    golang.org/x/tools/cmd/goimports \
-    golang.org/x/tools/cmd/gorename \
-    golang.org/x/tools/cmd/oracle \
-    golang.org/x/tools/cmd/vet \
-    "
-
-  for p in $gopackages; do
-    echo -e "\t${yellow}INSTALL${end_color} ${bold}${p}${normal}..."
-    go get -f -u $p
-    echo -e "\t${green}DONE${end_color}    ${bold}${p}${normal}"
-  done
-  echo -e "${green}DONE${end_color}    ${bold}golang${normal} dependencies"
-fi
-
 vim +'silent! PlugClean!|' +'qall!'
 
 if which nvim > /dev/null; then
@@ -125,7 +103,6 @@ if [ $UPDATE == 1 ]; then
 else
   vimcmd=$vimcmd"silent! PlugInstall!|"
 fi
-vimcmd=$vimcmd"silent! GoInstallBinaries!|"
 
 if [ $INTERACTIVE == 1 ] ; then
   vim +"$vimcmd" +'qall!'
