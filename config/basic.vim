@@ -12,6 +12,9 @@ endif
 set shell=/bin/bash
 " }}}
 
+" Use this for color compatibility
+set t_ut=
+
 " Backups {{{
 set swapfile                    " Keep swapfiles
 set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp

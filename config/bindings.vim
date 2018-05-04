@@ -89,10 +89,6 @@ nnoremap <C-H> <C-W><C-H>
 " }}}
 
 " Other {{{
-" Opens NERDTree to the current file
-map <leader>r :NERDTreeFind<cr>
-set t_ut=
-
 " Copies file location relative to CWD
 map <leader>Y :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%")<CR>
 " " with line number
