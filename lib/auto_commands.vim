@@ -28,10 +28,14 @@ if has("autocmd")
     autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
     autocmd FileType python set sw=4 sts=4 et
 
-    autocmd! BufRead,BufNewFile *.sass setfiletype sass 
+    autocmd! BufRead,BufNewFile *.sass setfiletype sass
 
+    " Markdown things
     autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
     autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+
+    " Enable spellcheck for markdown files
+    autocmd BufRead,BufNewFile *.md setl spell
 
     " Don't syntax highlight markdown because it's often wrong
     autocmd! FileType mkd setlocal syn=off
@@ -39,6 +43,9 @@ if has("autocmd")
     " Leave the return key alone when in command line windows, since it's used
     " to run commands there.
     autocmd! CmdwinEnter * nnoremap <buffer> <cr> <cr>
+
+    " Enable spellcheck for git commits
+    autocmd FileType gitcommit setl spell
   augroup END
 
   autocmd! FileType ruby,eruby,yaml set tw=80 ai sw=2 sts=2 et
