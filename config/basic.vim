@@ -97,3 +97,5 @@ set mousehide  " Hide mouse after chars typed
 " set mouse=a  " Mouse in all modes
 " }}}
 
+" Tag generation
+let g:gutentags_file_list_command = 'rg --files'
