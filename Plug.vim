@@ -34,6 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
 
   " A command-line fuzzy finder written in Go
   Plug 'junegunn/fzf', { 'do': 'yes \| ./install'  }
+  Plug 'junegunn/fzf.vim'
 " }}}
 
 " UI Additions {{{
@@ -142,6 +143,9 @@ Plug 'darfink/vim-plist'
 Plug 'tpope/vim-rails',             { 'for': ['ruby', 'rake'] }
 Plug 'tpope/vim-rake',              { 'for': ['ruby', 'rake'] }
 Plug 'tpope/vim-bundler',           { 'for': ['ruby', 'rake'] }
+
+" Linting
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
 

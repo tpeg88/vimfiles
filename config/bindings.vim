@@ -46,9 +46,9 @@ vnoremap <silent> p :call <sid>ReplacePaste()<cr>
 " ---------------
 
 " Edit vimrc with ,vi
-nmap <silent> <leader>vi :e ~/.vim/vimrc<CR>
+nmap <silent> <leader>vi :e ~/.config/nvim/vimrc<CR>
 " Reload vimrc with ,vir
-nmap <silent> <leader>vir :so ~/.vim/vimrc<CR>
+nmap <silent> <leader>vir :so ~/.config/nvim/vimrc<CR>
 
 " Open files in current directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
@@ -73,6 +73,7 @@ nmap <silent> <leader>sf :QuickSpellingFix<CR>
 " Window {{{
 " Equal Size Windows
 nmap <silent> <leader>w= :wincmd =<CR>
+
 " Swap Windows
 nmap <silent> <leader>wx :wincmd x<CR>
 
@@ -81,11 +82,17 @@ nmap <silent> <leader>hs :split<CR>
 nmap <silent> <leader>vs :vsplit<CR>
 nmap <silent> <leader>sc :close<CR>
 
+" Maps Alt-[h,j,k,l] to resizing a window split
+map <silent> ˙ 5<C-w><
+map <silent> ∆ 5<C-W>-
+map <silent> ˚ 5<C-W>+
+map <silent> ¬ 5<C-w>>
+
 " Split Navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
 " }}}
 
 " Other {{{

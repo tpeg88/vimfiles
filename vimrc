@@ -30,6 +30,7 @@ runtime! config/plugin/multicursor.vim
 runtime! config/plugin/neosnippet.vim
 runtime! config/plugin/NERDTree.vim
 runtime! config/plugin/omnicompletion.vim
+runtime! config/plugin/prettier.vim
 runtime! config/plugin/rainbow.vim
 runtime! config/plugin/signify.vim
 runtime! config/plugin/tagbar.vim
@@ -41,6 +42,7 @@ runtime! config/plugin/nvim/deoplete.vim
 " Language Configuration
 " ----------------------------------------
 
+runtime! config/lang/go.vim
 runtime! config/lang/json.vim
 runtime! config/lang/rust.vim
 runtime! config/lang/yaml.vim

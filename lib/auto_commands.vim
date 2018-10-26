@@ -57,7 +57,9 @@ if has("autocmd")
 
   augroup golang
     autocmd FileType go compiler go
-    autocmd! BufEnter *.go call golang#buffcommands()
+    autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
+    autocmd FileType go compiler go
+    au FileType go nmap gd <Plug>(go-def)
   augroup END
 
   autocmd! BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
