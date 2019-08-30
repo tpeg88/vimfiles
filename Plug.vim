@@ -119,8 +119,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Konfekt/FastFold'
 
   " provides an asynchronous keyword completion system in the current buffer
+  " requires python3 support: https://github.com/Shougo/deoplete.nvim#requirements
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   let g:deoplete#enable_at_startup = 1
+  let g:deoplete#sources#go#gocode_binary = '$GOPATH/bin/gocode'
 
   " deoplete.nvim source for Golang and gocode or vim-go
   Plug 'zchee/deoplete-go'
