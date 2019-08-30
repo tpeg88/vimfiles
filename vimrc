@@ -37,6 +37,7 @@ runtime! config/plugin/tagbar.vim
 runtime! config/plugin/undotree.vim
 runtime! config/plugin/nvim/neomake.vim
 runtime! config/plugin/nvim/deoplete.vim
+runtime! config/plugin/vim-go.vim
 
 " ----------------------------------------
 " Language Configuration
