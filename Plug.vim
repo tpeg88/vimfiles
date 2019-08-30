@@ -139,12 +139,47 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Shougo/neosnippet-snippets'
 " }}}
 
-" Syntax highlighting for all
-Plug 'sheerun/vim-polyglot'
+" PList
 Plug 'darfink/vim-plist'
+
+" Ruby
+Plug 'vim-ruby/vim-ruby',           { 'for': ['ruby', 'rake'] }
 Plug 'tpope/vim-rails',             { 'for': ['ruby', 'rake'] }
 Plug 'tpope/vim-rake',              { 'for': ['ruby', 'rake'] }
 Plug 'tpope/vim-bundler',           { 'for': ['ruby', 'rake'] }
+
+" Go
+Plug 'fatih/vim-go',                { 'do': ':GoUpdateBinaries' }
+
+" Rust
+Plug 'rust-lang/rust.vim'
+
+" Docker
+Plug 'honza/dockerfile.vim'
+
+" Markdown
+Plug 'shime/vim-livedown', { 'for': ['markdown'] }
+
+" JavaScript
+  Plug 'pangloss/vim-javascript',  { 'for': ['javascript']        }
+  Plug 'mxw/vim-jsx',              { 'for': ['javascript']        }
+  Plug 'maksimr/vim-jsbeautify',   { 'for': ['javascript']        }
+  Plug 'kchmck/vim-coffee-script', { 'for': ['coffee']            }
+  Plug 'elzr/vim-json'
+
+  " TypeScript
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+
+" CSS / HTML
+  Plug 'mattn/emmet-vim'
+  Plug 'tpope/vim-haml',            { 'for': ['haml']              }
+  Plug 'nono/vim-handlebars',       { 'for': ['handlebars']        }
+  Plug 'cakebaker/scss-syntax.vim', { 'for': ['scss','sass']       }
+  Plug 'hail2u/vim-css3-syntax',    { 'for': ['css','scss','sass'] }
+  Plug 'othree/html5.vim'
+  Plug 'juvenn/mustache.vim',       { 'for': ['mustache']          }
+  Plug 'gregsexton/MatchTag'
 
 " Linting
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
